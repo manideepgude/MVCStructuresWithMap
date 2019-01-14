@@ -10,4 +10,6 @@ import UIKit
 
 class SubDeptCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var bannerImages: UIImageView!
+    
 }

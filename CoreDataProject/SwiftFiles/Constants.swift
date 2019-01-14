@@ -10,7 +10,7 @@ import Foundation
 
 //MARK:- APIBaseURL
 public let BASE_URL = "http://easemypay.in/airborne_holidays/webservices/"
-
+public let BASE_CRL = "http://13.126.20.47/app/syfeventomate/"
 //MARK:- APIURL
 public let LOGIN               = "login"
 public let SENDOTP             = "send_otp"
@@ -37,7 +37,9 @@ public let GETACCESSORYIES     = "get_accessories"
 public let ADDWISHLIST         = "add_to_wishlist"
 public let REMOVEWISHLIST      = "remove_wishlist"
 public let VERIFYOTP           = "verify_otp"
-
+public let CollectedData       = "departments/loadDepartments.php"
+public let SubDepartmentsData  = "departments/loadSubDepartments.php"
+public let LifeCykul           = "http://13.126.20.47/app/lifeCykul/webservice/V3.1.3/home.php"
 //MARK:- HTTPMethod
 public let HTTPGET = "GET"
 public let HTTPPOST = "POST"

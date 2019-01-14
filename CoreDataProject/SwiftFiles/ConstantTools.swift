@@ -28,6 +28,27 @@ class ConstantTools: NSObject {
         indicatorView.dismiss(true)
     }
     
+        func getTodayString() -> String{
+            
+            let date = Date()
+            let calender = Calendar.current
+            let components = calender.dateComponents([.year,.month,.day,.hour,.minute,.second], from: date)
+            
+            let year = components.year
+            let month = components.month
+            let day = components.day
+            let hour = components.hour
+            let minute = components.minute
+            let second = components.second
+            
+            let today_string = String(year!) + "-" + String(month!) + "-" + String(day!) + " " + String(hour!)  + ":" + String(minute!) + ":" +  String(second!)
+            
+            return today_string
+            
+        }
+    
+
+    
     // MARK: - Downloading Images
     func downloadImgFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
         URLSession.shared.dataTask(with: url) {
@@ -75,6 +96,8 @@ class ConstantTools: NSObject {
         imageView.layer.borderColor = customColor.cgColor;
         return imageView
     }
+    
+   
 }
 
 extension UIAlertController {
@@ -89,3 +112,4 @@ extension UIAlertController {
         return alertController
     }
 }
+

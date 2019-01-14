@@ -10,4 +10,6 @@ import UIKit
 
 class SubDepartmentsCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var ImageViews: UIImageView!
+    
 }
