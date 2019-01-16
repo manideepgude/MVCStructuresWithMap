@@ -10,6 +10,7 @@ import Foundation
 import MRProgress
 
 class ConstantTools: NSObject {
+   
     static let sharedConstantTool  = ConstantTools();
     var indicatorView = MRProgressOverlayView()
     var isLogin: Bool = false
