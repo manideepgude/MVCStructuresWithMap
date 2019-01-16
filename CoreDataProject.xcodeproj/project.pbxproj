@@ -25,10 +25,7 @@
 		FA7D032321E8C00F0036FBC1 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D032221E8C00F0036FBC1 /* CollectionViewCell.swift */; };
 		FA7D032521E8C0CB0036FBC1 /* ArraysFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D032421E8C0CB0036FBC1 /* ArraysFile.swift */; };
 		FA7D032721E8C1D20036FBC1 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D032621E8C1D20036FBC1 /* Reachability.swift */; };
-		FA92053B21EEE507005E2A96 /* Offlinedata+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92053921EEE507005E2A96 /* Offlinedata+CoreDataClass.swift */; };
-		FA92053C21EEE507005E2A96 /* Offlinedata+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92053A21EEE507005E2A96 /* Offlinedata+CoreDataProperties.swift */; };
 		FA92054321EEEE4D005E2A96 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92054221EEEE4C005E2A96 /* Utils.swift */; };
-		FA92054521EEFC7E005E2A96 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92054421EEFC7E005E2A96 /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,10 +51,7 @@
 		FA7D032221E8C00F0036FBC1 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		FA7D032421E8C0CB0036FBC1 /* ArraysFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArraysFile.swift; sourceTree = "<group>"; };
 		FA7D032621E8C1D20036FBC1 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		FA92053921EEE507005E2A96 /* Offlinedata+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Offlinedata+CoreDataClass.swift"; sourceTree = "<group>"; };
-		FA92053A21EEE507005E2A96 /* Offlinedata+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Offlinedata+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FA92054221EEEE4C005E2A96 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		FA92054421EEFC7E005E2A96 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +150,6 @@
 		FA7D030C21E8BB8C0036FBC1 /* CoreDataProject */ = {
 			isa = PBXGroup;
 			children = (
-				FA92053F21EEE53C005E2A96 /* OfflineFiles */,
 				FA7D031C21E8BB950036FBC1 /* Info.plist */,
 				938657DC21E9E72C009C2341 /* ViewControllers */,
 				938657D421E9CDD6009C2341 /* SwiftFiles */,
@@ -164,16 +157,6 @@
 				938657DD21E9E748009C2341 /* Design */,
 			);
 			path = CoreDataProject;
-			sourceTree = "<group>";
-		};
-		FA92053F21EEE53C005E2A96 /* OfflineFiles */ = {
-			isa = PBXGroup;
-			children = (
-				FA92053921EEE507005E2A96 /* Offlinedata+CoreDataClass.swift */,
-				FA92053A21EEE507005E2A96 /* Offlinedata+CoreDataProperties.swift */,
-				FA92054421EEFC7E005E2A96 /* CoreDataStack.swift */,
-			);
-			path = OfflineFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,7 +171,7 @@
 				FA7D030721E8BB8C0036FBC1 /* Frameworks */,
 				FA7D030821E8BB8C0036FBC1 /* Resources */,
 				13AA2A81B90C8169D59A928D /* [CP] Embed Pods Frameworks */,
-				BC188804A65D6DD30CA461C2 /* [CP] Copy Pods Resources */,
+				A586D2E15886EB3E1EB0FEBB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -258,7 +241,6 @@
 				"${BUILT_PRODUCTS_DIR}/MRProgress/MRProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/SlideController/SlideController.framework",
 				"${BUILT_PRODUCTS_DIR}/moa/moa.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -268,7 +250,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MRProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/moa.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +275,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BC188804A65D6DD30CA461C2 /* [CP] Copy Pods Resources */ = {
+		A586D2E15886EB3E1EB0FEBB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -324,12 +305,9 @@
 				FA7D031021E8BB8C0036FBC1 /* ViewController.swift in Sources */,
 				938657D821E9CFC7009C2341 /* ConstantTools.swift in Sources */,
 				FA7D030E21E8BB8C0036FBC1 /* AppDelegate.swift in Sources */,
-				FA92054521EEFC7E005E2A96 /* CoreDataStack.swift in Sources */,
 				FA7D032721E8C1D20036FBC1 /* Reachability.swift in Sources */,
 				9397380821EB23BE00F6A143 /* RecordpathViewController.swift in Sources */,
 				FA7D032321E8C00F0036FBC1 /* CollectionViewCell.swift in Sources */,
-				FA92053B21EEE507005E2A96 /* Offlinedata+CoreDataClass.swift in Sources */,
-				FA92053C21EEE507005E2A96 /* Offlinedata+CoreDataProperties.swift in Sources */,
 				FA7D031621E8BB8C0036FBC1 /* CoreDataProject.xcdatamodeld in Sources */,
 				938657D621E9CE14009C2341 /* RestAPIFile.swift in Sources */,
 				FA92054321EEEE4D005E2A96 /* Utils.swift in Sources */,

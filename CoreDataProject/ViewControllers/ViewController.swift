@@ -36,25 +36,6 @@ class ViewController: UIViewController
     
     // save data with coredata in swift 4.
     
-    func saveData() {
-        
-        let offlineCoreData = Offlinedata(context: CoreDataStack.context)
-        offlineCoreData.challengeInfoFr = activityAboutArr
-        offlineCoreData.eventTypeFr = activityEventType
-        offlineCoreData.headerFr = activityHeaderArr
-        offlineCoreData.inviteTextFr = activityInviteText
-        offlineCoreData.menuItemsFr = menuItemsActivity
-        offlineCoreData.rewardsFr = activityRewards
-        offlineCoreData.rideBannerFr = activityBannerArr
-        offlineCoreData.rideLogoFr = rideLogoActivity
-        offlineCoreData.rideNameFr = rideNameActivity
-        offlineCoreData.statusFr = statusActivity
-        offlineCoreData.challengeIDFr = ActivityID
-        offlineCoreData.tabHeaderFr = activityTabBarArr
-
-        CoreDataStack.saveContext()
-        self.freeChalengesCoreData = offlineCoreData
-    }
     
 
     func imageslider()

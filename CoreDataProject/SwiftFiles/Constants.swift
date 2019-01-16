@@ -8,7 +8,6 @@
 
 import Foundation
 
-    let APP_DELEGATE = (UIApplication .shared .delegate as? AppDelegate)!
     //MARK:- APIBaseURL
     public let BASE_CRL = "http://13.126.20.47/app/syfeventomate/"
     //MARK:- APIURL
