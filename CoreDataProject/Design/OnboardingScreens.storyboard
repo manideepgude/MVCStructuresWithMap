@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Boarding One View Controller-->
+        <scene sceneID="buc-Kp-hgf">
+            <objects>
+                <viewController storyboardIdentifier="ONBoardingOneViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="D8T-do-U9J" customClass="ONBoardingOneViewController" customModule="CoreDataProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bGC-cO-kzC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M1.png" translatesAutoresizingMaskIntoConstraints="NO" id="tSq-xZ-UdA">
+                                <rect key="frame" x="8" y="28" width="351" height="531"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="351" id="Csq-dv-h1O"/>
+                                    <constraint firstAttribute="height" constant="531" id="p5t-ya-lRc"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUc-aO-e4A">
+                                <rect key="frame" x="12" y="617" width="343" height="30"/>
+                                <state key="normal" title="Skip"/>
+                                <connections>
+                                    <action selector="skipButtonAction:" destination="D8T-do-U9J" eventType="touchUpInside" id="Qfg-ZZ-Ap0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tSq-xZ-UdA" firstAttribute="top" secondItem="6j6-2F-svs" secondAttribute="top" constant="8" id="K8U-Q4-jlG"/>
+                            <constraint firstItem="vUc-aO-e4A" firstAttribute="leading" secondItem="6j6-2F-svs" secondAttribute="leading" constant="12" id="SzI-tC-raP"/>
+                            <constraint firstItem="vUc-aO-e4A" firstAttribute="top" secondItem="tSq-xZ-UdA" secondAttribute="bottom" constant="58" id="ihY-W6-oMi"/>
+                            <constraint firstItem="6j6-2F-svs" firstAttribute="trailing" secondItem="vUc-aO-e4A" secondAttribute="trailing" constant="20" id="ims-PC-MAg"/>
+                            <constraint firstItem="tSq-xZ-UdA" firstAttribute="trailing" secondItem="6j6-2F-svs" secondAttribute="trailing" constant="-16" id="qKg-Tp-v4W"/>
+                            <constraint firstItem="tSq-xZ-UdA" firstAttribute="leading" secondItem="6j6-2F-svs" secondAttribute="leading" constant="8" id="rmP-8j-C9d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6j6-2F-svs"/>
+                    </view>
+                    <connections>
+                        <segue destination="Rbz-23-rTa" kind="show" identifier="skipscreen" id="09b-Df-52q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="61c-hL-Bxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79" y="-269"/>
+        </scene>
+        <!--One Boarding Two View Controller-->
+        <scene sceneID="qOR-TO-n7L">
+            <objects>
+                <viewController storyboardIdentifier="OneBoardingTwoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rbz-23-rTa" customClass="OneBoardingTwoViewController" customModule="CoreDataProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t1R-UG-aRk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Subway.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kcf-dK-gRe">
+                                <rect key="frame" x="16" y="36" width="343" height="504"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="504" id="kQB-HR-Y8N"/>
+                                    <constraint firstAttribute="width" constant="343" id="owP-V5-HwU"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l89-yN-MOp">
+                                <rect key="frame" x="16" y="617" width="343" height="30"/>
+                                <state key="normal" title="Skip"/>
+                                <connections>
+                                    <action selector="skipButtonTwo:" destination="Rbz-23-rTa" eventType="touchUpInside" id="AX1-G6-NHw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kcf-dK-gRe" firstAttribute="top" secondItem="z8f-pu-W1i" secondAttribute="top" constant="16" id="Tv8-N9-GVR"/>
+                            <constraint firstItem="l89-yN-MOp" firstAttribute="leading" secondItem="z8f-pu-W1i" secondAttribute="leading" constant="16" id="V3C-h0-oR4"/>
+                            <constraint firstItem="z8f-pu-W1i" firstAttribute="trailing" secondItem="kcf-dK-gRe" secondAttribute="trailing" constant="16" id="WtV-Kl-h7H"/>
+                            <constraint firstItem="kcf-dK-gRe" firstAttribute="leading" secondItem="z8f-pu-W1i" secondAttribute="leading" constant="16" id="XDn-Yb-rf4"/>
+                            <constraint firstItem="l89-yN-MOp" firstAttribute="top" secondItem="kcf-dK-gRe" secondAttribute="bottom" constant="77" id="weU-Fj-pfV"/>
+                            <constraint firstItem="z8f-pu-W1i" firstAttribute="trailing" secondItem="l89-yN-MOp" secondAttribute="trailing" constant="16" id="ylU-lB-NcE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="z8f-pu-W1i"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CR4-gY-Mxc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709.60000000000002" y="-269.41529235382313"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="M1.png" width="390" height="517"/>
+        <image name="Subway.jpg" width="1280" height="720"/>
+    </resources>
+</document>

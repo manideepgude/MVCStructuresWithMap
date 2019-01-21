@@ -16,6 +16,11 @@
 		9397380821EB23BE00F6A143 /* RecordpathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9397380721EB23BE00F6A143 /* RecordpathViewController.swift */; };
 		9397380A21EB49CF00F6A143 /* TimerFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9397380921EB49CF00F6A143 /* TimerFile.swift */; };
 		9397380C21EB5DF800F6A143 /* SignalStrengthIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9397380B21EB5DF800F6A143 /* SignalStrengthIndicator.swift */; };
+		93AEFEF021F5B40500893CCB /* OnboardingScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93AEFEEF21F5B40500893CCB /* OnboardingScreens.storyboard */; };
+		93AEFEF321F5B59000893CCB /* ONBoardingOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AEFEF221F5B59000893CCB /* ONBoardingOneViewController.swift */; };
+		93AEFEF521F5B5A300893CCB /* OneBoardingTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AEFEF421F5B5A300893CCB /* OneBoardingTwoViewController.swift */; };
+		93AEFEF821F5B89700893CCB /* M1.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AEFEF721F5B89700893CCB /* M1.png */; };
+		93AEFEFA21F5B89C00893CCB /* Subway.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93AEFEF921F5B89C00893CCB /* Subway.jpg */; };
 		FA7D030E21E8BB8C0036FBC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D030D21E8BB8C0036FBC1 /* AppDelegate.swift */; };
 		FA7D031021E8BB8C0036FBC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D030F21E8BB8C0036FBC1 /* ViewController.swift */; };
 		FA7D031321E8BB8C0036FBC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7D031121E8BB8C0036FBC1 /* Main.storyboard */; };
@@ -38,6 +43,11 @@
 		9397380721EB23BE00F6A143 /* RecordpathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordpathViewController.swift; sourceTree = "<group>"; };
 		9397380921EB49CF00F6A143 /* TimerFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerFile.swift; sourceTree = "<group>"; };
 		9397380B21EB5DF800F6A143 /* SignalStrengthIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalStrengthIndicator.swift; sourceTree = "<group>"; };
+		93AEFEEF21F5B40500893CCB /* OnboardingScreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnboardingScreens.storyboard; sourceTree = "<group>"; };
+		93AEFEF221F5B59000893CCB /* ONBoardingOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ONBoardingOneViewController.swift; sourceTree = "<group>"; };
+		93AEFEF421F5B5A300893CCB /* OneBoardingTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneBoardingTwoViewController.swift; sourceTree = "<group>"; };
+		93AEFEF721F5B89700893CCB /* M1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = M1.png; sourceTree = "<group>"; };
+		93AEFEF921F5B89C00893CCB /* Subway.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Subway.jpg; sourceTree = "<group>"; };
 		A886131AD3D9518BB8D5D4C2 /* Pods-CoreDataProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreDataProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreDataProject/Pods-CoreDataProject.debug.xcconfig"; sourceTree = "<group>"; };
 		BEE30C34A9630AB25EBECDEC /* Pods-CoreDataProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreDataProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreDataProject/Pods-CoreDataProject.release.xcconfig"; sourceTree = "<group>"; };
 		FA7D030A21E8BB8C0036FBC1 /* CoreDataProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,11 +123,31 @@
 			isa = PBXGroup;
 			children = (
 				FA7D031121E8BB8C0036FBC1 /* Main.storyboard */,
+				93AEFEEF21F5B40500893CCB /* OnboardingScreens.storyboard */,
 				FA7D031721E8BB950036FBC1 /* Assets.xcassets */,
 				FA7D031921E8BB950036FBC1 /* LaunchScreen.storyboard */,
 				FA7D031421E8BB8C0036FBC1 /* CoreDataProject.xcdatamodeld */,
 			);
 			path = Design;
+			sourceTree = "<group>";
+		};
+		93AEFEF121F5B56200893CCB /* ONBoardingControllers */ = {
+			isa = PBXGroup;
+			children = (
+				93AEFEF621F5B82000893CCB /* ONBoardingScreensImages */,
+				93AEFEF221F5B59000893CCB /* ONBoardingOneViewController.swift */,
+				93AEFEF421F5B5A300893CCB /* OneBoardingTwoViewController.swift */,
+			);
+			path = ONBoardingControllers;
+			sourceTree = "<group>";
+		};
+		93AEFEF621F5B82000893CCB /* ONBoardingScreensImages */ = {
+			isa = PBXGroup;
+			children = (
+				93AEFEF921F5B89C00893CCB /* Subway.jpg */,
+				93AEFEF721F5B89700893CCB /* M1.png */,
+			);
+			path = ONBoardingScreensImages;
 			sourceTree = "<group>";
 		};
 		CBD7BE58321E1D2551C0759A /* Pods */ = {
@@ -150,6 +180,7 @@
 		FA7D030C21E8BB8C0036FBC1 /* CoreDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				93AEFEF121F5B56200893CCB /* ONBoardingControllers */,
 				FA7D031C21E8BB950036FBC1 /* Info.plist */,
 				938657DC21E9E72C009C2341 /* ViewControllers */,
 				938657D421E9CDD6009C2341 /* SwiftFiles */,
@@ -171,7 +202,7 @@
 				FA7D030721E8BB8C0036FBC1 /* Frameworks */,
 				FA7D030821E8BB8C0036FBC1 /* Resources */,
 				13AA2A81B90C8169D59A928D /* [CP] Embed Pods Frameworks */,
-				A586D2E15886EB3E1EB0FEBB /* [CP] Copy Pods Resources */,
+				401A209373F4F5F39F2DAB34 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,8 +251,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93AEFEF821F5B89700893CCB /* M1.png in Resources */,
 				FA7D031B21E8BB950036FBC1 /* LaunchScreen.storyboard in Resources */,
+				93AEFEF021F5B40500893CCB /* OnboardingScreens.storyboard in Resources */,
 				FA7D031821E8BB950036FBC1 /* Assets.xcassets in Resources */,
+				93AEFEFA21F5B89C00893CCB /* Subway.jpg in Resources */,
 				FA7D031321E8BB8C0036FBC1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,25 +291,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoreDataProject/Pods-CoreDataProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8B4A0DD9F98C29E8E58EF40D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CoreDataProject-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A586D2E15886EB3E1EB0FEBB /* [CP] Copy Pods Resources */ = {
+		401A209373F4F5F39F2DAB34 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -295,6 +311,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoreDataProject/Pods-CoreDataProject-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8B4A0DD9F98C29E8E58EF40D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoreDataProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -302,6 +336,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93AEFEF321F5B59000893CCB /* ONBoardingOneViewController.swift in Sources */,
+				93AEFEF521F5B5A300893CCB /* OneBoardingTwoViewController.swift in Sources */,
 				FA7D031021E8BB8C0036FBC1 /* ViewController.swift in Sources */,
 				938657D821E9CFC7009C2341 /* ConstantTools.swift in Sources */,
 				FA7D030E21E8BB8C0036FBC1 /* AppDelegate.swift in Sources */,

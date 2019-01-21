@@ -24,6 +24,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Google places API Key:
         GMSServices.provideAPIKey("AIzaSyAQwkmxZuzo0E3joGB5JgMOTl6awRA-Enc")
         GMSPlacesClient.provideAPIKey("AIzaSyAQwkmxZuzo0E3joGB5JgMOTl6awRA-Enc")
+        
+        // code for ONboarding screens in swift...
+        let launchedBefore = UserDefaults.standard.bool(forKey: "hasLaunched")
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let launchedStoryboard = UIStoryboard(name: "OnboardingScreens", bundle: nil)
+        let mainStorybaord = UIStoryboard(name: "Main", bundle: nil)
+        
+        var vc: UIViewController
+        if launchedBefore
+        {
+            vc = mainStorybaord.instantiateInitialViewController()!
+        }
+        else
+        {
+            vc = launchedStoryboard.instantiateViewController(withIdentifier: "ONBoardingOneViewController")
+        }
+        UserDefaults.standard.set(true, forKey: "hasLaunched")
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
         return true
     }
 
