@@ -112,7 +112,7 @@ class ViewController: UIViewController
                         let departmentID = imageData["departmentID"] as! String
                         self.departmentIDArray.append(departmentID)
                         self.responseImageArray.append(responseImages)
-                        self.saveData()
+                          self.saveData()
                         self.CollectionView.reloadData()
                     }
                     
@@ -153,6 +153,7 @@ extension ViewController : UICollectionViewDataSource,UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let subDept = self.storyboard?.instantiateViewController(withIdentifier: "SubViewController") as! SubViewController
+        subDept.departmentID = departmentIDArray[indexPath.row]
         self.navigationController?.pushViewController(subDept, animated: true)
     }
 }
