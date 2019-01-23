@@ -12,6 +12,7 @@ import SDWebImage
 import IQKeyboardManagerSwift
 import Auk
 import moa
+import CoreData
 
 class ViewController: UIViewController
 {
@@ -22,6 +23,7 @@ class ViewController: UIViewController
     var challngeObj:bannerImages.ImagesArray! = nil
     var bannerArray = [String]()
     var responseImageArray = [String]()
+    private var sliderImagesCoreData : SliderImages?
     var departmentIDArray = [String]()
     @IBOutlet weak var CollectionView: UICollectionView!
     override func viewDidLoad()
@@ -36,8 +38,39 @@ class ViewController: UIViewController
     
     // save data with coredata in swift 4.
     
+    func saveData() {
+        let offlineCoreData = SliderImages(context: CoreDataStack.context)
+        offlineCoreData.bannerImagesSlider = bannerArray as NSObject
+        CoreDataStack.saveContext()
+        self.sliderImagesCoreData = offlineCoreData
+    }
     
+    // fetch coredata in swift 4.
+    
+    func fetchImages()
+    {
+        let request : NSFetchRequest<SliderImages> = SliderImages.fetchRequest()
+        let context = CoreDataStack.persistentContainer.viewContext
+        let p = try? context.fetch(request)
+        for i in p!{
+            bannerArray = i.bannerImagesSlider! as! [String]
+        }
+    }
 
+    //delete coredata in swift 4.
+    
+    func deleteAllRecords() {
+        
+        let context = CoreDataStack.persistentContainer.viewContext
+        
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "SliderImages")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+        do {
+            try context.execute(deleteRequest)
+            try context.save()
+        } catch {
+        }
+    }
     func imageslider()
     {
         scrollview.auk.settings.placeholderImage = UIImage(named: "great_auk_placeholder.png")

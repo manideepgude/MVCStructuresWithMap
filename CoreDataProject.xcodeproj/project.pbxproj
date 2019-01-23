@@ -21,6 +21,7 @@
 		93AEFEF521F5B5A300893CCB /* OneBoardingTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AEFEF421F5B5A300893CCB /* OneBoardingTwoViewController.swift */; };
 		93AEFEF821F5B89700893CCB /* M1.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AEFEF721F5B89700893CCB /* M1.png */; };
 		93AEFEFA21F5B89C00893CCB /* Subway.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93AEFEF921F5B89C00893CCB /* Subway.jpg */; };
+		FA5A9FA121F84E2C00518BD1 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A9FA021F84E2B00518BD1 /* CoreDataStack.swift */; };
 		FA7D030E21E8BB8C0036FBC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D030D21E8BB8C0036FBC1 /* AppDelegate.swift */; };
 		FA7D031021E8BB8C0036FBC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D030F21E8BB8C0036FBC1 /* ViewController.swift */; };
 		FA7D031321E8BB8C0036FBC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7D031121E8BB8C0036FBC1 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		93AEFEF921F5B89C00893CCB /* Subway.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Subway.jpg; sourceTree = "<group>"; };
 		A886131AD3D9518BB8D5D4C2 /* Pods-CoreDataProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreDataProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreDataProject/Pods-CoreDataProject.debug.xcconfig"; sourceTree = "<group>"; };
 		BEE30C34A9630AB25EBECDEC /* Pods-CoreDataProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreDataProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreDataProject/Pods-CoreDataProject.release.xcconfig"; sourceTree = "<group>"; };
+		FA5A9FA021F84E2B00518BD1 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		FA7D030A21E8BB8C0036FBC1 /* CoreDataProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7D030D21E8BB8C0036FBC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA7D030F21E8BB8C0036FBC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				9397380B21EB5DF800F6A143 /* SignalStrengthIndicator.swift */,
+				FA5A9FA021F84E2B00518BD1 /* CoreDataStack.swift */,
 				FA92054221EEEE4C005E2A96 /* Utils.swift */,
 				FA7D032621E8C1D20036FBC1 /* Reachability.swift */,
 				FA7D032421E8C0CB0036FBC1 /* ArraysFile.swift */,
@@ -202,7 +205,7 @@
 				FA7D030721E8BB8C0036FBC1 /* Frameworks */,
 				FA7D030821E8BB8C0036FBC1 /* Resources */,
 				13AA2A81B90C8169D59A928D /* [CP] Embed Pods Frameworks */,
-				401A209373F4F5F39F2DAB34 /* [CP] Copy Pods Resources */,
+				219456F4EB71F5F18180E56A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,7 +294,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoreDataProject/Pods-CoreDataProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		401A209373F4F5F39F2DAB34 /* [CP] Copy Pods Resources */ = {
+		219456F4EB71F5F18180E56A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -339,6 +342,7 @@
 				93AEFEF321F5B59000893CCB /* ONBoardingOneViewController.swift in Sources */,
 				93AEFEF521F5B5A300893CCB /* OneBoardingTwoViewController.swift in Sources */,
 				FA7D031021E8BB8C0036FBC1 /* ViewController.swift in Sources */,
+				FA5A9FA121F84E2C00518BD1 /* CoreDataStack.swift in Sources */,
 				938657D821E9CFC7009C2341 /* ConstantTools.swift in Sources */,
 				FA7D030E21E8BB8C0036FBC1 /* AppDelegate.swift in Sources */,
 				FA7D032721E8C1D20036FBC1 /* Reachability.swift in Sources */,
