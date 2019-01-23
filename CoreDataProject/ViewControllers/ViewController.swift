@@ -40,7 +40,7 @@ class ViewController: UIViewController
     
     func saveData() {
         let offlineCoreData = SliderImages(context: CoreDataStack.context)
-        offlineCoreData.bannerImagesSlider = bannerArray as NSObject
+        offlineCoreData.bannerImagesSlider = responseImageArray as NSObject
         CoreDataStack.saveContext()
         self.sliderImagesCoreData = offlineCoreData
     }
@@ -53,7 +53,9 @@ class ViewController: UIViewController
         let context = CoreDataStack.persistentContainer.viewContext
         let p = try? context.fetch(request)
         for i in p!{
-            bannerArray = i.bannerImagesSlider! as! [String]
+            print(i.bannerImagesSlider ?? [""])
+            responseImageArray = i.bannerImagesSlider! as! [String]
+            self.CollectionView.reloadData()
         }
     }
 
@@ -71,6 +73,7 @@ class ViewController: UIViewController
         } catch {
         }
     }
+    
     func imageslider()
     {
         scrollview.auk.settings.placeholderImage = UIImage(named: "great_auk_placeholder.png")
@@ -80,6 +83,9 @@ class ViewController: UIViewController
     }
     
     func getcategoriesData() {
+        if currentReachabilityStatus == .reachableViaWiFi || currentReachabilityStatus == .reachableViaWWAN
+        {
+        self.deleteAllRecords()
         ConstantTools.sharedConstantTool.showsMRIndicatorView(self.view)
         let urlString: String = ("\(BASE_CRL)\(CollectedData)")
         let body: String = "country=INDIA"
@@ -98,7 +104,6 @@ class ViewController: UIViewController
                         self.bannerArray.append(Images)
                         self.scrollview.auk.show(url: Images)
                         self.scrollview.auk.startAutoScroll(delaySeconds: 3)
-                        self.CollectionView.reloadData()
                     }
                     for i in 0..<response.count
                     {
@@ -107,6 +112,7 @@ class ViewController: UIViewController
                         let departmentID = imageData["departmentID"] as! String
                         self.departmentIDArray.append(departmentID)
                         self.responseImageArray.append(responseImages)
+                        self.saveData()
                         self.CollectionView.reloadData()
                     }
                     
@@ -116,6 +122,12 @@ class ViewController: UIViewController
         })
         
     }
+        else
+        {
+            self.fetchImages()
+            print("sumanth")
+        }
+}
 }
 
 // MARK:- UICollectionViewDataSource
@@ -141,7 +153,6 @@ extension ViewController : UICollectionViewDataSource,UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let subDept = self.storyboard?.instantiateViewController(withIdentifier: "SubViewController") as! SubViewController
-        subDept.departmentID = departmentIDArray[indexPath.row]
         self.navigationController?.pushViewController(subDept, animated: true)
     }
 }
